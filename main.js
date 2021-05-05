@@ -37,9 +37,10 @@ class Bus{
 
     }
     embarquer(tonble,start,end){
-        if (tonble >= 2.8){
-            tonble = tonble - 2.80;
-            this.caisse = this.caisse + 2.80
+        let ticket = 2.8
+        if (tonble >= ticket){
+            tonble = tonble - ticket;
+            this.caisse = this.caisse + ticket
             start.personnes.splice(bus.personnes.indexOf(farhad),1)
             this.personnes.push(farhad)
             this.personnes.splice(bus.personnes.indexOf(farhad),1)
@@ -83,4 +84,4 @@ console.log(maison.personnes)
 console.log(molenGeek.personnes)
 console.log(snack.personnes)
 // ### Faites un console.log() de votre argent, ainsi que l'argent du Bus
-console.log(bus.caisse,farhad.argent)
+console.log((bus.caisse,farhad.argent).toPrecision(4))
